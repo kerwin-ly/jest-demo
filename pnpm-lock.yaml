@@ -3,12 +3,14 @@ lockfileVersion: 5.4
 specifiers:
   '@types/jest': 27.4.1
   jest: 27.5.1
+  jest-location-mock: 1.0.9
   ts-jest: 27.1.4
   typescript: ^4.6.3
 
 devDependencies:
   '@types/jest': 27.4.1
   jest: 27.5.1
+  jest-location-mock: 1.0.9
   ts-jest: 27.1.4_tgc6da2oqazvrn56dzwolsqo5i
   typescript: 4.6.3
 
@@ -357,6 +359,10 @@ packages:
   /@istanbuljs/schema/0.1.3:
     resolution: {integrity: sha512-ZXRY4jNvVgSVQ8DL3LTcakaAtXwTVUxE81hslsyD2AtoXW/wVob10HkOJ1X/pAlcI7D+2YoZKg5do8G/w6RYgA==}
     engines: {node: '>=8'}
+    dev: true
+
+  /@jedmao/location/3.0.0:
+    resolution: {integrity: sha512-p7mzNlgJbCioUYLUEKds3cQG4CHONVFJNYqMe6ocEtENCL/jYmMo1Q3ApwsMmU+L0ZkaDJEyv4HokaByLoPwlQ==}
     dev: true
 
   /@jest/console/27.5.1:
@@ -1663,6 +1669,14 @@ packages:
     dependencies:
       jest-get-type: 27.5.1
       pretty-format: 27.5.1
+    dev: true
+
+  /jest-location-mock/1.0.9:
+    resolution: {integrity: sha512-DN/v7Zsa3N4uGgWTCrMrPPxhZORr/4N5gi+u7Tk6sLdORYplrC0//wfFN5FOtx4ZdQzDVfY6rLa4d+wfTKzQHw==}
+    engines: {node: '>=10.0.0'}
+    dependencies:
+      '@jedmao/location': 3.0.0
+      jest-diff: 27.5.1
     dev: true
 
   /jest-matcher-utils/27.5.1:

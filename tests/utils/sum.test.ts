@@ -1,4 +1,4 @@
-import sum from "@/utils/sum";
+import { sum } from "@/utils/sum";
 
 describe("sum", () => {
   it("Get sum of two nums", () => {
