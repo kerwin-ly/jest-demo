@@ -1,4 +1,3 @@
-// 更偏向真实用例，效果更好
 import server from "../../mockServer/server";
 import { rest } from "msw";
 import { render, screen } from "@testing-library/react";
@@ -6,7 +5,7 @@ import AuthButton from "@/components/AuthButton";
 import React from "react";
 import { UserRoleType } from "@/apis/user";
 
-// 初始化函数
+// initialize
 const setup = (userType: UserRoleType) => {
   server.use(
     rest.get("https://mysite.com/api/role", async (req, res, ctx) => {
@@ -15,9 +14,9 @@ const setup = (userType: UserRoleType) => {
   );
 };
 
-describe("AuthButton Mock Http 请求", () => {
+describe("AuthButton Mock Http Request", () => {
   it("可以正确展示普通用户按钮内容", async () => {
-    setup("user");
+    await setup("user");
 
     render(<AuthButton>你好</AuthButton>);
 
@@ -25,7 +24,7 @@ describe("AuthButton Mock Http 请求", () => {
   });
 
   it("可以正确展示管理员按钮内容", async () => {
-    setup("admin");
+    await setup("admin");
 
     render(<AuthButton>你好</AuthButton>);
 
