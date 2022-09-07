@@ -22,8 +22,10 @@ const AuthButton: FC<Props> = (props) => {
   };
 
   useEffect(() => {
-    getLoginState().catch((e) => message.error(e.message));
-  }, []);
+    getLoginState()
+      .then(() => {})
+      .catch((e) => message.error(e.message));
+  });
 
   return (
     <Button {...restProps} className={classNames(className, styles.authButton)}>
